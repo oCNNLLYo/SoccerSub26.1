@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#101827" />
+  <meta name="theme-color" content="#0b1220" />
   <title>Youth Soccer Substitution Planner</title>
 
   <style>
@@ -11,32 +11,32 @@
       --bg: #0b1220;
       --panel: #121c2d;
       --panel-2: #18253a;
-      --border: #2b3b56;
-      --text: #f3f7ff;
-      --muted: #a9b7cc;
-      --blue: #4da3ff;
-      --green: #55d68a;
-      --purple: #b48cff;
-      --gold: #ffcb65;
-      --red: #ff7777;
-      --warning-bg: #3b2c10;
-      --good-bg: #123821;
+      --border: #2d405e;
+      --text: #f4f8ff;
+      --muted: #aebcd1;
+      --blue: #4ba3ff;
+      --green: #55d990;
+      --purple: #bd96ff;
+      --gold: #ffd06a;
+      --red: #ff7f7f;
+      --good-bg: #123b24;
+      --warn-bg: #3d2d10;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding: 0 0 105px;
-      background: var(--bg);
+      padding-bottom: 110px;
       color: var(--text);
+      background: var(--bg);
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.35;
     }
 
     header {
       padding: 22px 18px;
-      background: linear-gradient(135deg, #172b4d, #173e70);
+      background: linear-gradient(135deg, #152b4b, #194475);
       border-bottom: 1px solid var(--border);
     }
 
@@ -47,12 +47,12 @@
 
     header p {
       margin: 0;
-      color: #d5e5ff;
-      font-size: 0.92rem;
+      color: #d6e5fc;
+      font-size: 0.9rem;
     }
 
     main {
-      max-width: 1200px;
+      max-width: 1220px;
       margin: 0 auto;
       padding: 16px;
     }
@@ -70,7 +70,7 @@
     }
 
     h2 { font-size: 1.2rem; }
-    h3 { font-size: 1rem; color: #d9e8ff; }
+    h3 { font-size: 1rem; color: #dce9ff; }
 
     .settings-grid {
       display: grid;
@@ -82,7 +82,7 @@
       display: block;
       margin-bottom: 5px;
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: bold;
     }
 
@@ -100,7 +100,7 @@
     .hint {
       margin: 13px 0 0;
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
     }
 
     .roster-grid {
@@ -130,7 +130,7 @@
       display: block;
       margin-top: 2px;
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: normal;
     }
 
@@ -139,6 +139,7 @@
       flex-direction: column;
       align-items: center;
       gap: 4px;
+      margin: 0;
       color: var(--muted);
       font-size: 0.7rem;
       font-weight: bold;
@@ -157,21 +158,21 @@
       margin-top: 14px;
       padding: 12px;
       border-radius: 10px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
 
     .status.good {
       display: block;
-      color: #c8f8d8;
+      color: #cdf8db;
       background: var(--good-bg);
-      border: 1px solid #2f8851;
+      border: 1px solid #338658;
     }
 
     .status.warning {
       display: block;
-      color: #ffe2a1;
-      background: var(--warning-bg);
-      border: 1px solid #9a7726;
+      color: #ffe4a8;
+      background: var(--warn-bg);
+      border: 1px solid #98772b;
     }
 
     .summary-grid {
@@ -190,7 +191,7 @@
 
     .metric-label {
       color: var(--muted);
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -198,7 +199,7 @@
     .metric-value {
       margin-top: 4px;
       color: white;
-      font-size: 1.2rem;
+      font-size: 1.18rem;
       font-weight: bold;
     }
 
@@ -221,20 +222,20 @@
 
     .checkpoint {
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.77rem;
       text-align: right;
     }
 
     .role-row {
       margin: 8px 0;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
 
     .role-label {
       display: inline-block;
-      min-width: 90px;
+      min-width: 88px;
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -259,14 +260,14 @@
       font-size: 1rem;
     }
 
-    .player-summary .detail {
+    .detail {
       color: var(--muted);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
     }
 
     .minutes {
-      text-align: right;
       color: white;
+      text-align: right;
       font-weight: bold;
     }
 
@@ -291,7 +292,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-      background: rgba(11, 18, 32, 0.96);
+      background: rgba(11, 18, 32, 0.97);
       border-top: 1px solid var(--border);
       backdrop-filter: blur(10px);
     }
@@ -299,12 +300,12 @@
     button {
       min-height: 52px;
       padding: 11px;
+      color: white;
+      background: #2b6eb8;
       border: 0;
       border-radius: 10px;
-      color: white;
-      background: #2c6fb9;
       cursor: pointer;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       font-weight: bold;
     }
 
@@ -312,12 +313,12 @@
     button.secondary { background: #35445b; }
     button.wide { grid-column: 1 / -1; }
 
-    @media (min-width: 700px) {
+    @media (min-width: 720px) {
       body { padding-bottom: 30px; }
 
       main {
         display: grid;
-        grid-template-columns: minmax(360px, 0.85fr) minmax(500px, 1.3fr);
+        grid-template-columns: minmax(370px, 0.85fr) minmax(520px, 1.3fr);
         gap: 18px;
         align-items: start;
       }
@@ -338,7 +339,11 @@
         border: 0;
       }
 
-      .sticky-actions button { flex: 1; min-width: 150px; }
+      .sticky-actions button {
+        flex: 1;
+        min-width: 145px;
+      }
+
       .sticky-actions .wide { flex-basis: 100%; }
     }
 
@@ -359,11 +364,10 @@
         padding: 0;
       }
 
-      .results-card, .segment-card, .player-summary, .metric {
+      .results-card, .metric, .segment-card, .player-summary {
         color: #111;
         background: white;
         border-color: #aaa;
-        box-shadow: none;
       }
 
       .goalie, .offense, .defense, .bench {
@@ -376,7 +380,7 @@
 <body>
   <header>
     <h1>Youth Soccer Substitution Planner</h1>
-    <p>Mobile-friendly U8 and U10 substitution rotations.</p>
+    <p>U8 and U10 mobile sideline rotation planner.</p>
   </header>
 
   <main>
@@ -393,15 +397,12 @@
         </div>
 
         <div>
-          <label for="gameLength">Game Length</label>
-          <input id="gameLength" type="number" min="8" value="48" />
+          <label for="gameLength">Game Length (Minutes)</label>
+          <input id="gameLength" type="number" min="12" value="50" />
         </div>
       </div>
 
-      <p class="hint">
-        The planner uses eight equal game segments. Subs occur at every half-quarter
-        and quarter. Goalkeepers remain in goal for one quarter, then change.
-      </p>
+      <p id="timingHint" class="hint"></p>
 
       <h3 style="margin-top: 20px;">Attendance and Goalkeeper Eligibility</h3>
       <div id="rosterGrid" class="roster-grid"></div>
@@ -419,13 +420,13 @@
       <h2>Rotation Plan</h2>
 
       <div id="emptyState" class="empty">
-        Select the players attending, then choose <strong>Generate Rotation</strong>.
+        Mark the players attending, then choose <strong>Generate Rotation</strong>.
       </div>
 
       <div id="results" style="display: none;">
         <div class="summary-grid">
           <div class="metric">
-            <div class="metric-label">Present</div>
+            <div class="metric-label">Players Present</div>
             <div id="presentCount" class="metric-value">0</div>
           </div>
           <div class="metric">
@@ -437,12 +438,16 @@
             <div id="minimumTime" class="metric-value">0</div>
           </div>
           <div class="metric">
-            <div class="metric-label">Segment</div>
-            <div id="segmentTime" class="metric-value">0</div>
+            <div class="metric-label">Regular Subs</div>
+            <div id="subTime" class="metric-value">0</div>
           </div>
         </div>
 
-        <button class="secondary" style="width: 100%; margin-bottom: 12px;" onclick="window.print()">
+        <button
+          class="secondary"
+          style="width: 100%; margin-bottom: 12px;"
+          onclick="window.print()"
+        >
           Print Rotation Plan
         </button>
 
@@ -455,9 +460,21 @@
   </main>
 
   <script>
-    const teamSettings = {
-      u10: { playersOnField: 8, offense: 4, defense: 3 },
-      u8: { playersOnField: 7, offense: 3, defense: 3 }
+    const TEAM_SETTINGS = {
+      u10: {
+        playersOnField: 8,
+        offenseSlots: 4,
+        defenseSlots: 3,
+        interval: 5,
+        defaultLength: 50
+      },
+      u8: {
+        playersOnField: 7,
+        offenseSlots: 3,
+        defenseSlots: 3,
+        interval: 4,
+        defaultLength: 48
+      }
     };
 
     const teams = {
@@ -491,25 +508,25 @@
 
     const teamLevel = document.getElementById("teamLevel");
     const gameLength = document.getElementById("gameLength");
+    const timingHint = document.getElementById("timingHint");
     const rosterGrid = document.getElementById("rosterGrid");
     const statusMessage = document.getElementById("statusMessage");
+
     const emptyState = document.getElementById("emptyState");
     const results = document.getElementById("results");
     const schedule = document.getElementById("schedule");
     const playerSummary = document.getElementById("playerSummary");
 
-    function currentTeam() {
-      return teams[teamLevel.value];
+    function getTeamKey() {
+      return teamLevel.value;
     }
 
-    function showStatus(message, type = "") {
-      statusMessage.textContent = message;
-      statusMessage.className = type ? `status ${type}` : "status";
+    function getSettings() {
+      return TEAM_SETTINGS[getTeamKey()];
     }
 
-    function formatMinutes(value) {
-      const rounded = Math.round(value * 10) / 10;
-      return `${rounded} min`;
+    function getTeam() {
+      return teams[getTeamKey()];
     }
 
     function formatClock(value) {
@@ -518,21 +535,28 @@
       return `${minutes}:${String(seconds).padStart(2, "0")}`;
     }
 
-    function checkpointLabel(index) {
-      return [
-        "Starting lineup",
-        "Half-quarter substitutions",
-        "Quarter — goalkeeper change",
-        "Half-quarter substitutions",
-        "Halftime — goalkeeper change",
-        "Half-quarter substitutions",
-        "Quarter — goalkeeper change",
-        "Half-quarter substitutions"
-      ][index];
+    function formatMinutes(value) {
+      const rounded = Math.round(value * 10) / 10;
+      return `${rounded} min`;
+    }
+
+    function showStatus(message, type = "") {
+      statusMessage.textContent = message;
+      statusMessage.className = type ? `status ${type}` : "status";
+    }
+
+    function updateTimingHint() {
+      if (getTeamKey() === "u10") {
+        timingHint.textContent =
+          "U10 uses regular five-minute substitutions. The goalkeeper changes at each quarter. For off-cycle quarter changes, the incoming goalkeeper is reserved on the bench at the previous regular substitution.";
+      } else {
+        timingHint.textContent =
+          "U8 uses four 12-minute quarters with substitutions every four minutes. Goalkeepers change at 12:00, 24:00, and 36:00.";
+      }
     }
 
     function renderRoster() {
-      rosterGrid.innerHTML = currentTeam().map((player, index) => `
+      rosterGrid.innerHTML = getTeam().map((player, index) => `
         <div class="player-card">
           <div class="player-name">
             ${player.name}
@@ -541,313 +565,403 @@
 
           <label class="toggle-label">
             Present
-            <input type="checkbox" data-index="${index}" data-field="attending"
-              ${player.attending ? "checked" : ""}>
+            <input
+              type="checkbox"
+              data-index="${index}"
+              data-field="attending"
+              ${player.attending ? "checked" : ""}
+            />
           </label>
 
           <label class="toggle-label">
             GK
-            <input type="checkbox" data-index="${index}" data-field="goalieEligible"
-              ${player.goalieEligible ? "checked" : ""}>
+            <input
+              type="checkbox"
+              data-index="${index}"
+              data-field="goalieEligible"
+              ${player.goalieEligible ? "checked" : ""}
+            />
           </label>
         </div>
       `).join("");
 
       rosterGrid.querySelectorAll("input").forEach(input => {
         input.addEventListener("change", event => {
-          const player = currentTeam()[Number(event.target.dataset.index)];
+          const player = getTeam()[Number(event.target.dataset.index)];
           player[event.target.dataset.field] = event.target.checked;
         });
       });
     }
 
-    function initializeStats(players) {
+    function createStats(players) {
       const stats = {};
+
       players.forEach(player => {
         stats[player.id] = {
-          total: 0,
-          goalie: 0,
-          offense: 0,
-          defense: 0
+          totalMinutes: 0,
+          goalieMinutes: 0,
+          offenseMinutes: 0,
+          defenseMinutes: 0,
+          benchStreak: 0,
+          playStreak: 0
         };
       });
+
       return stats;
     }
 
-    function assignGoalkeepers(players) {
-      const eligible = players.filter(player => player.goalieEligible);
-
-      if (eligible.length < 2) {
-        return {
-          error: "Mark at least two attending players as goalkeeper eligible so the goalkeeper can rotate each quarter."
-        };
-      }
-
-      const counts = {};
-      players.forEach(player => counts[player.id] = 0);
-
-      const goalies = [];
-      let previousId = null;
-
-      for (let quarter = 0; quarter < 4; quarter++) {
-        const selected = eligible
-          .filter(player => player.id !== previousId)
-          .sort((a, b) => counts[a.id] - counts[b.id] || a.id - b.id)[0];
-
-        counts[selected.id] += 2;
-        goalies.push(selected.id, selected.id);
-        previousId = selected.id;
-      }
-
-      return { goalies };
+    function randomTie() {
+      return Math.random() - 0.5;
     }
 
-    function choosePlayers(candidates, needed, stats, role, previousIds) {
-      const oppositeRole = role === "offense" ? "defense" : "offense";
+    function chooseGoalie(players, previousGoalieId, stats) {
+      return players
+        .filter(player => player.goalieEligible && player.id !== previousGoalieId)
+        .sort((a, b) => {
+          const goalieDifference =
+            stats[a.id].goalieMinutes - stats[b.id].goalieMinutes;
 
+          if (goalieDifference !== 0) return goalieDifference;
+
+          const totalDifference =
+            stats[a.id].totalMinutes - stats[b.id].totalMinutes;
+
+          if (totalDifference !== 0) return totalDifference;
+
+          return randomTie();
+        })[0];
+    }
+
+    function chooseReservedGoalie(players, activeGoalie, stats) {
+      const eligible = players
+        .filter(player =>
+          player.goalieEligible &&
+          player.id !== activeGoalie.id &&
+          stats[player.id].benchStreak < 2
+        )
+        .sort((a, b) => {
+          const totalDifference =
+            stats[a.id].totalMinutes - stats[b.id].totalMinutes;
+
+          if (totalDifference !== 0) return totalDifference;
+
+          const goalieDifference =
+            stats[a.id].goalieMinutes - stats[b.id].goalieMinutes;
+
+          if (goalieDifference !== 0) return goalieDifference;
+
+          return randomTie();
+        });
+
+      return eligible[0] || null;
+    }
+
+    function playerRank(player, role, stats, mustPlayIds) {
+      const stat = stats[player.id];
+      const opposite = role === "offenseMinutes"
+        ? "defenseMinutes"
+        : "offenseMinutes";
+
+      return {
+        mustPlay: mustPlayIds.includes(player.id) ? 0 : 1,
+        totalMinutes: stat.totalMinutes,
+        roleMinutes: stat[role],
+        roleImbalance: stat[role] - stat[opposite],
+        shortPlayPenalty: stat.playStreak === 1 ? -1 : 0,
+        random: Math.random()
+      };
+    }
+
+    function chooseRolePlayers(candidates, numberNeeded, role, stats, mustPlayIds) {
       return [...candidates]
         .sort((a, b) => {
-          const aNeed = stats[a.id].total < 4 ? 1 : 0;
-          const bNeed = stats[b.id].total < 4 ? 1 : 0;
-          if (aNeed !== bNeed) return bNeed - aNeed;
+          const ar = playerRank(a, role, stats, mustPlayIds);
+          const br = playerRank(b, role, stats, mustPlayIds);
 
-          const total = stats[a.id].total - stats[b.id].total;
-          if (total !== 0) return total;
+          if (ar.mustPlay !== br.mustPlay) return ar.mustPlay - br.mustPlay;
+          if (ar.totalMinutes !== br.totalMinutes) {
+            return ar.totalMinutes - br.totalMinutes;
+          }
+          if (ar.roleMinutes !== br.roleMinutes) {
+            return ar.roleMinutes - br.roleMinutes;
+          }
+          if (ar.roleImbalance !== br.roleImbalance) {
+            return ar.roleImbalance - br.roleImbalance;
+          }
+          if (ar.shortPlayPenalty !== br.shortPlayPenalty) {
+            return ar.shortPlayPenalty - br.shortPlayPenalty;
+          }
 
-          const roleTime = stats[a.id][role] - stats[b.id][role];
-          if (roleTime !== 0) return roleTime;
-
-          const roleBalance =
-            (stats[a.id][role] - stats[a.id][oppositeRole]) -
-            (stats[b.id][role] - stats[b.id][oppositeRole]);
-          if (roleBalance !== 0) return roleBalance;
-
-          const aWasOn = previousIds.includes(a.id) ? 1 : 0;
-          const bWasOn = previousIds.includes(b.id) ? 1 : 0;
-          if (aWasOn !== bWasOn) return aWasOn - bWasOn;
-
-          return a.id - b.id;
+          return ar.random - br.random;
         })
-        .slice(0, needed);
+        .slice(0, numberNeeded);
     }
 
-    function recalculateStats(plan, players) {
-      const stats = initializeStats(players);
+    function chooseLineup(players, activeGoalie, reservedGoalie, settings, stats) {
+      const excludedIds = [activeGoalie.id];
 
-      plan.forEach(segment => {
-        stats[segment.goalie.id].total++;
-        stats[segment.goalie.id].goalie++;
+      if (reservedGoalie) {
+        excludedIds.push(reservedGoalie.id);
+      }
 
-        segment.offense.forEach(player => {
-          stats[player.id].total++;
-          stats[player.id].offense++;
-        });
+      const candidates = players.filter(
+        player => !excludedIds.includes(player.id)
+      );
 
-        segment.defense.forEach(player => {
-          stats[player.id].total++;
-          stats[player.id].defense++;
-        });
+      const mustPlayIds = players
+        .filter(player =>
+          player.id !== activeGoalie.id &&
+          player.id !== (reservedGoalie ? reservedGoalie.id : null) &&
+          stats[player.id].benchStreak >= 2
+        )
+        .map(player => player.id);
+
+      const offense = chooseRolePlayers(
+        candidates,
+        settings.offenseSlots,
+        "offenseMinutes",
+        stats,
+        mustPlayIds
+      );
+
+      const offenseIds = offense.map(player => player.id);
+
+      const defense = chooseRolePlayers(
+        candidates.filter(player => !offenseIds.includes(player.id)),
+        settings.defenseSlots,
+        "defenseMinutes",
+        stats,
+        mustPlayIds
+      );
+
+      return { offense, defense };
+    }
+
+    function addSegment(plan, players, stats, start, end, label, goalie, offense, defense) {
+      const duration = end - start;
+
+      if (duration <= 0) return;
+
+      const lineupIds = [
+        goalie.id,
+        ...offense.map(player => player.id),
+        ...defense.map(player => player.id)
+      ];
+
+      const bench = players.filter(player => !lineupIds.includes(player.id));
+
+      stats[goalie.id].totalMinutes += duration;
+      stats[goalie.id].goalieMinutes += duration;
+
+      offense.forEach(player => {
+        stats[player.id].totalMinutes += duration;
+        stats[player.id].offenseMinutes += duration;
       });
 
-      return stats;
-    }
-
-    function rebalanceMinimum(plan, players, stats) {
-      let changed = true;
-      let attempts = 0;
-
-      while (changed && attempts++ < 250) {
-        changed = false;
-
-        const underplayed = players
-          .filter(player => stats[player.id].total < 4)
-          .sort((a, b) => stats[a.id].total - stats[b.id].total);
-
-        for (const incoming of underplayed) {
-          for (const segment of plan) {
-            const lineup = [
-              segment.goalie.id,
-              ...segment.offense.map(player => player.id),
-              ...segment.defense.map(player => player.id)
-            ];
-
-            if (lineup.includes(incoming.id)) continue;
-
-            for (const roleName of ["offense", "defense"]) {
-              const role = segment[roleName];
-              const outgoing = role
-                .filter(player => stats[player.id].total > 4)
-                .sort((a, b) => stats[b.id].total - stats[a.id].total)[0];
-
-              if (!outgoing) continue;
-
-              const position = role.findIndex(player => player.id === outgoing.id);
-              role[position] = incoming;
-
-              stats[incoming.id].total++;
-              stats[incoming.id][roleName]++;
-
-              stats[outgoing.id].total--;
-              stats[outgoing.id][roleName]--;
-
-              changed = true;
-              break;
-            }
-
-            if (changed) break;
-          }
-
-          if (changed) break;
-        }
-      }
-    }
-
-    function balanceRoles(plan, stats) {
-      let improved = true;
-      let attempts = 0;
-
-      while (improved && attempts++ < 250) {
-        improved = false;
-
-        for (const segment of plan) {
-          for (let o = 0; o < segment.offense.length; o++) {
-            for (let d = 0; d < segment.defense.length; d++) {
-              const offensePlayer = segment.offense[o];
-              const defensePlayer = segment.defense[d];
-
-              const offenseDifference =
-                stats[offensePlayer.id].offense - stats[offensePlayer.id].defense;
-
-              const defenseDifference =
-                stats[defensePlayer.id].offense - stats[defensePlayer.id].defense;
-
-              const before =
-                Math.abs(offenseDifference) + Math.abs(defenseDifference);
-
-              const after =
-                Math.abs(offenseDifference - 2) +
-                Math.abs(defenseDifference + 2);
-
-              if (after < before) {
-                segment.offense[o] = defensePlayer;
-                segment.defense[d] = offensePlayer;
-
-                stats[offensePlayer.id].offense--;
-                stats[offensePlayer.id].defense++;
-
-                stats[defensePlayer.id].offense++;
-                stats[defensePlayer.id].defense--;
-
-                improved = true;
-                break;
-              }
-            }
-
-            if (improved) break;
-          }
-
-          if (improved) break;
-        }
-      }
-    }
-
-    function createPlan(players, settings, totalMinutes) {
-      const goalieResult = assignGoalkeepers(players);
-      if (goalieResult.error) return goalieResult;
-
-      const segmentMinutes = totalMinutes / 8;
-      const stats = initializeStats(players);
-
-      // Preload goalkeeper assignments so outfield scheduling accounts for them.
-      goalieResult.goalies.forEach(id => {
-        stats[id].total++;
-        stats[id].goalie++;
+      defense.forEach(player => {
+        stats[player.id].totalMinutes += duration;
+        stats[player.id].defenseMinutes += duration;
       });
 
+      plan.push({
+        start,
+        end,
+        label,
+        goalie,
+        offense,
+        defense,
+        bench
+      });
+    }
+
+    function updateRegularRotationStreaks(players, stats, goalie, offense, defense) {
+      const activeIds = [
+        goalie.id,
+        ...offense.map(player => player.id),
+        ...defense.map(player => player.id)
+      ];
+
+      players.forEach(player => {
+        if (activeIds.includes(player.id)) {
+          stats[player.id].benchStreak = 0;
+          stats[player.id].playStreak += 1;
+        } else {
+          stats[player.id].benchStreak += 1;
+          stats[player.id].playStreak = 0;
+        }
+      });
+    }
+
+    function getU10SpecialChange(blockStart, blockEnd, length) {
+      const quarterOne = length / 4;
+      const quarterThree = length * 3 / 4;
+
+      if (quarterOne > blockStart && quarterOne < blockEnd) {
+        return quarterOne;
+      }
+
+      if (quarterThree > blockStart && quarterThree < blockEnd) {
+        return quarterThree;
+      }
+
+      return null;
+    }
+
+    function buildRotation(players, settings, length, teamKey) {
       const plan = [];
-      let previousIds = [];
+      const stats = createStats(players);
+      const warnings = [];
 
-      for (let i = 0; i < 8; i++) {
-        const goalie = players.find(player => player.id === goalieResult.goalies[i]);
-        const candidates = players.filter(player => player.id !== goalie.id);
-
-        const offense = choosePlayers(
-          candidates,
-          settings.offense,
-          stats,
-          "offense",
-          previousIds
-        );
-
-        const offenseIds = offense.map(player => player.id);
-
-        const defense = choosePlayers(
-          candidates.filter(player => !offenseIds.includes(player.id)),
-          settings.defense,
-          stats,
-          "defense",
-          previousIds
-        );
-
-        offense.forEach(player => {
-          stats[player.id].total++;
-          stats[player.id].offense++;
-        });
-
-        defense.forEach(player => {
-          stats[player.id].total++;
-          stats[player.id].defense++;
-        });
-
-        previousIds = [
-          goalie.id,
-          ...offense.map(player => player.id),
-          ...defense.map(player => player.id)
-        ];
-
-        plan.push({
-          index: i,
-          start: i * segmentMinutes,
-          end: (i + 1) * segmentMinutes,
-          goalie,
-          offense,
-          defense,
-          bench: []
+      const regularBlocks = [];
+      for (let start = 0; start < length; start += settings.interval) {
+        regularBlocks.push({
+          start,
+          end: Math.min(start + settings.interval, length)
         });
       }
 
-      let finalStats = recalculateStats(plan, players);
-      rebalanceMinimum(plan, players, finalStats);
+      let activeGoalie = chooseGoalie(players, null, stats);
 
-      finalStats = recalculateStats(plan, players);
-      balanceRoles(plan, finalStats);
+      if (!activeGoalie) {
+        return {
+          error: "At least two attending players must be marked goalkeeper eligible."
+        };
+      }
 
-      finalStats = recalculateStats(plan, players);
+      const half = length / 2;
+      const quarter = length / 4;
+      let priorGoalieId = null;
 
-      plan.forEach(segment => {
-        const onField = [
-          segment.goalie.id,
-          ...segment.offense.map(player => player.id),
-          ...segment.defense.map(player => player.id)
-        ];
+      regularBlocks.forEach((block, blockIndex) => {
+        const startsNewU8Quarter =
+          teamKey === "u8" &&
+          blockIndex > 0 &&
+          Math.abs(block.start % quarter) < 0.01;
 
-        segment.bench = players.filter(player => !onField.includes(player.id));
+        const startsU10Halftime =
+          teamKey === "u10" &&
+          Math.abs(block.start - half) < 0.01;
+
+        if (startsNewU8Quarter || startsU10Halftime) {
+          priorGoalieId = activeGoalie.id;
+          activeGoalie = chooseGoalie(players, priorGoalieId, stats);
+
+          if (!activeGoalie) {
+            warnings.push(
+              "A goalkeeper rotation could not avoid repeating the prior goalkeeper."
+            );
+          }
+        }
+
+        const specialGoalieChange =
+          teamKey === "u10"
+            ? getU10SpecialChange(block.start, block.end, length)
+            : null;
+
+        let reservedGoalie = null;
+
+        if (specialGoalieChange) {
+          reservedGoalie = chooseReservedGoalie(players, activeGoalie, stats);
+
+          if (!reservedGoalie) {
+            warnings.push(
+              `No goalkeeper-eligible player with a safe bench streak was available for the ${formatClock(specialGoalieChange)} goalkeeper change.`
+            );
+
+            reservedGoalie = players.find(player =>
+              player.goalieEligible && player.id !== activeGoalie.id
+            );
+          }
+        }
+
+        const lineup = chooseLineup(
+          players,
+          activeGoalie,
+          reservedGoalie,
+          settings,
+          stats
+        );
+
+        const regularLabel = block.start === 0
+          ? "Starting lineup"
+          : `Regular substitution — ${formatClock(block.start)}`;
+
+        if (!specialGoalieChange) {
+          addSegment(
+            plan,
+            players,
+            stats,
+            block.start,
+            block.end,
+            regularLabel,
+            activeGoalie,
+            lineup.offense,
+            lineup.defense
+          );
+        } else {
+          addSegment(
+            plan,
+            players,
+            stats,
+            block.start,
+            specialGoalieChange,
+            `${regularLabel}; next goalkeeper reserved on bench`,
+            activeGoalie,
+            lineup.offense,
+            lineup.defense
+          );
+
+          addSegment(
+            plan,
+            players,
+            stats,
+            specialGoalieChange,
+            block.end,
+            `Goalkeeper-only change — ${formatClock(specialGoalieChange)}`,
+            reservedGoalie,
+            lineup.offense,
+            lineup.defense
+          );
+
+          priorGoalieId = activeGoalie.id;
+          activeGoalie = reservedGoalie;
+        }
+
+        updateRegularRotationStreaks(
+          players,
+          stats,
+          activeGoalie,
+          lineup.offense,
+          lineup.defense
+        );
       });
 
-      return { plan, stats: finalStats, segmentMinutes };
+      const threeBenchRotations = players.filter(
+        player => stats[player.id].benchStreak >= 3
+      );
+
+      if (threeBenchRotations.length) {
+        warnings.push(
+          `Bench-streak review: ${threeBenchRotations.map(player => player.name).join(", ")} ended with three or more consecutive regular bench rotations.`
+        );
+      }
+
+      return { plan, stats, warnings };
     }
 
-    function renderResults(players, result, settings, totalMinutes) {
+    function renderResults(players, rotation, settings, totalMinutes) {
       document.getElementById("presentCount").textContent = players.length;
       document.getElementById("fieldCount").textContent = settings.playersOnField;
-      document.getElementById("minimumTime").textContent = formatMinutes(totalMinutes / 2);
-      document.getElementById("segmentTime").textContent = formatMinutes(result.segmentMinutes);
+      document.getElementById("minimumTime").textContent =
+        formatMinutes(totalMinutes / 2);
+      document.getElementById("subTime").textContent =
+        `${settings.interval} min`;
 
-      schedule.innerHTML = result.plan.map(segment => `
+      schedule.innerHTML = rotation.plan.map(segment => `
         <article class="segment-card">
           <div class="segment-heading">
             <span>${formatClock(segment.start)}–${formatClock(segment.end)}</span>
-            <span class="checkpoint">${checkpointLabel(segment.index)}</span>
+            <span class="checkpoint">${segment.label}</span>
           </div>
 
           <div class="role-row">
@@ -867,35 +981,36 @@
 
           <div class="role-row">
             <span class="role-label">Bench</span>
-            <span class="bench">${segment.bench.length ? segment.bench.map(player => player.name).join(", ") : "No bench players"}</span>
+            <span class="bench">${
+              segment.bench.length
+                ? segment.bench.map(player => player.name).join(", ")
+                : "No bench players"
+            }</span>
           </div>
         </article>
       `).join("");
 
-      playerSummary.innerHTML = players
+      playerSummary.innerHTML = [...players]
         .sort((a, b) => a.id - b.id)
         .map(player => {
-          const stats = result.stats[player.id];
-          const total = stats.total * result.segmentMinutes;
-          const goalie = stats.goalie * result.segmentMinutes;
-          const offense = stats.offense * result.segmentMinutes;
-          const defense = stats.defense * result.segmentMinutes;
-          const bench = totalMinutes - total;
-          const minimumMet = stats.total >= 4;
+          const stat = rotation.stats[player.id];
+          const benchMinutes = totalMinutes - stat.totalMinutes;
+          const minimumMet = stat.totalMinutes >= totalMinutes / 2;
 
           return `
             <article class="player-summary">
               <div>
                 <strong>${player.name}</strong>
                 <div class="detail">
-                  GK ${formatMinutes(goalie)} ·
-                  O ${formatMinutes(offense)} ·
-                  D ${formatMinutes(defense)} ·
-                  Bench ${formatMinutes(bench)}
+                  GK ${formatMinutes(stat.goalieMinutes)} ·
+                  O ${formatMinutes(stat.offenseMinutes)} ·
+                  D ${formatMinutes(stat.defenseMinutes)} ·
+                  Bench ${formatMinutes(benchMinutes)}
                 </div>
               </div>
+
               <div class="minutes">
-                ${formatMinutes(total)}
+                ${formatMinutes(stat.totalMinutes)}
                 <div class="${minimumMet ? "minimum-yes" : "minimum-no"} detail">
                   ${minimumMet ? "Half-game met" : "Below minimum"}
                 </div>
@@ -909,12 +1024,16 @@
     }
 
     function generateRotation() {
-      const players = currentTeam().filter(player => player.attending);
-      const settings = teamSettings[teamLevel.value];
+      const players = getTeam().filter(player => player.attending);
+      const settings = getSettings();
       const totalMinutes = Number(gameLength.value);
+      const teamKey = getTeamKey();
 
-      if (!Number.isFinite(totalMinutes) || totalMinutes < 8) {
-        showStatus("Enter a game length of at least eight minutes.", "warning");
+      if (!Number.isFinite(totalMinutes) || totalMinutes < settings.interval) {
+        showStatus(
+          `Enter a game length of at least ${settings.interval} minutes.`,
+          "warning"
+        );
         return;
       }
 
@@ -926,54 +1045,88 @@
         return;
       }
 
-      if ((players.length * 4) > (settings.playersOnField * 8)) {
+      if (teamKey === "u8" && totalMinutes !== 48) {
         showStatus(
-          "This attendance count cannot provide every player at least half the game using eight equal segments.",
+          "U8 defaults to four 12-minute quarters. A different game length may place goalkeeper changes away from normal four-minute substitution points.",
           "warning"
         );
+      }
+
+      if (teamKey === "u10" && totalMinutes !== 50) {
+        showStatus(
+          "U10 defaults to 50 minutes. A different game length may place quarter goalkeeper changes away from the expected 12:30 and 37:30 checkpoints.",
+          "warning"
+        );
+      }
+
+      const rotation = buildRotation(
+        players,
+        settings,
+        totalMinutes,
+        teamKey
+      );
+
+      if (rotation.error) {
+        showStatus(rotation.error, "warning");
         return;
       }
 
-      const result = createPlan(players, settings, totalMinutes);
+      const belowMinimum = players.filter(
+        player => rotation.stats[player.id].totalMinutes < totalMinutes / 2
+      );
 
-      if (result.error) {
-        showStatus(result.error, "warning");
-        return;
-      }
-
-      const belowMinimum = players.filter(player => result.stats[player.id].total < 4);
+      const messages = [];
 
       if (belowMinimum.length) {
-        showStatus(
-          `Rotation created, but the half-game minimum was not met for: ${belowMinimum.map(player => player.name).join(", ")}.`,
-          "warning"
+        messages.push(
+          `Half-game minimum not met for: ${belowMinimum.map(player => player.name).join(", ")}.`
         );
+      }
+
+      if (rotation.warnings.length) {
+        messages.push(...rotation.warnings);
+      }
+
+      if (messages.length) {
+        showStatus(messages.join(" "), "warning");
       } else {
         showStatus(
-          `Rotation generated: ${settings.offense} offense, ${settings.defense} defense, and one goalkeeper each segment.`,
+          `New rotation generated. Regular substitutions are every ${settings.interval} minutes, with goalkeeper rules applied.`,
           "good"
         );
       }
 
-      renderResults(players, result, settings, totalMinutes);
+      renderResults(players, rotation, settings, totalMinutes);
     }
 
     teamLevel.addEventListener("change", () => {
+      gameLength.value = getSettings().defaultLength;
       renderRoster();
+      updateTimingHint();
+
       results.style.display = "none";
       emptyState.style.display = "block";
       showStatus("");
     });
 
-    document.getElementById("generateBtn").addEventListener("click", generateRotation);
+    document.getElementById("generateBtn").addEventListener(
+      "click",
+      generateRotation
+    );
 
     document.getElementById("allBtn").addEventListener("click", () => {
-      currentTeam().forEach(player => player.attending = true);
+      getTeam().forEach(player => {
+        player.attending = true;
+      });
+
       renderRoster();
     });
 
     document.getElementById("noneBtn").addEventListener("click", () => {
-      currentTeam().forEach(player => player.attending = false);
+      getTeam().forEach(player => {
+        player.attending = false;
+      });
+
       renderRoster();
       results.style.display = "none";
       emptyState.style.display = "block";
@@ -981,6 +1134,7 @@
     });
 
     renderRoster();
+    updateTimingHint();
   </script>
 </body>
 </html>
